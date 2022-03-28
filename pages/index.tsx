@@ -10,7 +10,7 @@ function home(){
         async function fetchData() {
             const vercelapilink ="https://platzi-avocado-v2.vercel.app/";
             const localhost = "http://localhost:3002/";
-            const response = await fetch(`${localhost}api/avo`);
+            const response = await fetch(`${vercelapilink}api/avo`);
             const {data} = await response.json();
             setproductList(data);
             

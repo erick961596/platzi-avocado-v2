@@ -8,7 +8,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     const vercelapilink ="https://platzi-avocado-v2.vercel.app/";
     const localhost = "http://localhost:3002/";
 
-    const response = await fetch(`${localhost}/api/avo/`)
+    const response = await fetch(`${vercelapilink}/api/avo/`)
     const { data }: any = await response.json()
     const paths = data.map( ({ id }) => ( { params: { id } } ) )
   
@@ -27,7 +27,7 @@ export const getStaticProps: GetStaticProps = async ({params}) => {
   const vercelapilink ="https://platzi-avocado-v2.vercel.app/";
     const localhost = "http://localhost:3002/";
 
-        const res = await fetch(`${localhost}api/avo/${params?.id}`);
+        const res = await fetch(`${vercelapilink}api/avo/${params?.id}`);
         const product = await res.json();
         
           // Pass post data to the page via props
