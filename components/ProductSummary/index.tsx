@@ -19,7 +19,7 @@ function ProductSummary({product}) {
   return (
     <div className='container py-5 w-lg-75 mx-auto'>
     <div className="row">
-        <h1 className='text-center'>Product Summary</h1>
+        <h1 className='text-center'>Product Summary </h1>
             <div className="col-lg-6 col-12">
                 <Image src={image} alt={name} width={300} height={300} quality={85} />
             </div>
