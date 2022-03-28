@@ -8,7 +8,9 @@ function home(){
     useEffect(() => {
         
         async function fetchData() {
-            const response = await fetch('https://platzi-avocado-v2.vercel.app/api/avo');
+            const vercelapilink ="https://platzi-avocado-v2.vercel.app/";
+            const localhost = "http://localhost:3002/";
+            const response = await fetch(`${localhost}api/avo`);
             const {data} = await response.json();
             setproductList(data);
             

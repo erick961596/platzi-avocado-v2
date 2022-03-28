@@ -5,7 +5,7 @@ import Layout from '@components/Layout/'
 
 import AppProvider from "../context/AppContext";
 
-
+import "bootstrap/dist/css/bootstrap.min.css";
 function MyApp({ Component, pageProps }) {
     return (
       <AppProvider>
