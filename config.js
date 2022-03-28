@@ -5,7 +5,7 @@ function config(){
 
     //localhost = 'http://localhost:3002/';
     //vercelapi = 'https://platzi-avocado-v2.vercel.app/';
-    return "http://localhost:3002/";
+    return "https://platzi-avocado-v2.vercel.app/";
 }
 
 export default config;
