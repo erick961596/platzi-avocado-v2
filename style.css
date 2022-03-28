@@ -1,0 +1,19 @@
+.container{
+    background-color:  #ffffff;
+    
+
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+.flex-direction-initial{
+    flex-direction: initial !important;
+}
+
+@media screen and (min-width: 768px) {
+    .w-lg-75{
+        width: 75% !important;
+    }
+}
+    
