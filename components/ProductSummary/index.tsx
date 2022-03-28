@@ -29,7 +29,7 @@ function ProductSummary({product}) {
                     <span className='badge bg-secondary'>{price}</span>
                     
                         <input type="number" name="quantity" id="quantity" value={quantity} onChange={ event=> setQuantity(event.target.value)} />
-                        <button className='btn btn-primary' onClick={ handdledAddToCart(product, quantity) } >Add to Cart</button>
+                        <button className='btn btn-primary' onClick={ handdledAddToCart(product.data, quantity) } >Add to Cart</button>
                    
                 </div>
             </div>
