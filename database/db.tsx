@@ -23,7 +23,7 @@ class Database {
     return entry
   }
   
-  async getCompareProducts(quantity): Promise<any> {
+  async getCompare(quantity): Promise<any> {
     let randomsProducts = [];
     const all = await this.getAll()
     

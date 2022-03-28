@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react';
-
+import fetch from 'isomorphic-unfetch'
 import AvocadoItem from '@components/AvocadoItem';
+
+import config from "../config";
 
 function home(){
     const [productList, setproductList] = useState<any[]>([]);
 
     useEffect(() => {
-        
+
+    const api = config();
         async function fetchData() {
-            const vercelapilink ="https://platzi-avocado-v2.vercel.app/";
-            const localhost = "http://localhost:3002/";
-            const response = await fetch(`${vercelapilink}api/avo`);
+          
+            const response = await fetch(`${api}api/avo`);
             const {data} = await response.json();
             setproductList(data);
             

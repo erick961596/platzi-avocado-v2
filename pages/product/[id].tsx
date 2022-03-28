@@ -2,13 +2,15 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { GetStaticPaths, GetStaticProps } from 'next';
 
+
 import ProductSummary from '@components/ProductSummary';
 
+import config from '../../config';
 export const getStaticPaths: GetStaticPaths = async () => {
-    const vercelapilink ="https://platzi-avocado-v2.vercel.app/";
-    const localhost = "http://localhost:3002/";
 
-    const response = await fetch(`${vercelapilink}/api/avo/`)
+    const api = config();
+
+    const response = await fetch(`${api}/api/avo/`)
     const { data }: any = await response.json()
     const paths = data.map( ({ id }) => ( { params: { id } } ) )
   
@@ -24,10 +26,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 // This also gets called at build time
 export const getStaticProps: GetStaticProps = async ({params}) => {
   //console.log(params.id);
-  const vercelapilink ="https://platzi-avocado-v2.vercel.app/";
-    const localhost = "http://localhost:3002/";
-
-        const res = await fetch(`${vercelapilink}api/avo/${params?.id}`);
+ 
+  const api = config();
+        const res = await fetch(`${api}api/avo/${params?.id}`);
         const product = await res.json();
         
           // Pass post data to the page via props
