@@ -1,6 +1,5 @@
 import { IncomingMessage, ServerResponse } from "http";
 
-import queryString from "query-string"
 import DB from "@database";
 const getCompare= async(request, response) => {
 
