@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import AvocadoItem from '@components/avocadoItem';
+import AvocadoItem from '@components/AvocadoItem';
 
 function home(){
     const [productList, setproductList] = useState<any[]>([]);
